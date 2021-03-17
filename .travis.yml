@@ -14,6 +14,6 @@ deploy:
  provider: pages
  cleanup: true
  github-token: $GITHUB_TOKEN
- local_dir: dist/eSchool
+ local_dir: dist
 on:
  branch: master
