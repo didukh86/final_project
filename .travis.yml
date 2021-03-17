@@ -4,7 +4,7 @@ node_js: 10
 dist: focal
 
 
-before script: 
+before_script: 
 - npm install @angular/cli@7.0.3 
 - yarn install
 
