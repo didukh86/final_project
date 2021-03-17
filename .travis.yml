@@ -17,4 +17,4 @@ deploy:
  bucket: 'didukhbucket'
  skip_cleanup: true
  acl: public_read
- local_dir: dist/eSchool
+ local_dir: ./dist/eSchool
