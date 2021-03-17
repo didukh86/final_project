@@ -12,7 +12,7 @@ script:  ng build
 
 deploy:
  provider: pages
- cleanup: true
+ skip-cleanup: true
  github-token: $GITHUB_TOKEN
  local_dir: dist
 on:
