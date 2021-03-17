@@ -11,9 +11,10 @@ before_script:
 script:  ng build
 
 deploy:
- provider: pages
- skip-cleanup: true
- github-token: $GITHUB_TOKEN
- local_dir: dist
-on:
- branch: master
+ provider: s3
+ access_key_id: $AWS_KEY
+ secret_access_key: $AWS_SECRET
+ bucket: 'didukhbucket'
+ skip_cleanup: true
+ acl: public_read
+ local_dir: dist/eSchool
