@@ -1,20 +1,17 @@
 language: node_js
 node_js: 10
-
 dist: focal
-
-
-before_script: 
-- npm install @angular/cli@7.0.3 
+before_script:
+- npm install @angular/cli@7.0.3
 - yarn install
-
-script:  ng build
-
+script: ng build
 deploy:
- provider: s3
- access_key_id: $AWS_KEY
- secret_access_key: $AWS_SECRET
- bucket: 'didukhbucket'
- skip_cleanup: true
- acl: public_read
- local_dir: ./dist/eSchool
+  provider: s3
+  access_key_id: "$AWS_KEY"
+  secret_access_key: "$AWS_SECRET"
+  bucket: didukhbucket
+  skip_cleanup: true
+  acl: public_read
+  local_dir: "./dist/eSchool"
+env:
+  secure: NLxTs2XsCXXrMwOKwdsbKKdSth6uLr+YpjNSeArWvysfzuKd7rDTl/4+59eDqqgWZ1hrOg8qi7fhgC9lRtATdG4PuF0SeHg49410SXe7e/Lkbv0pMBrg7ZXgCiL7yl/H5ImdU7O69iLt+ehkUqeEwHO/SMBhgQDSgzzmmlZV4el6fp51/HZH0noXZUzDlNbCTtg19U446HM5hSmHUHdAG6167rJKAUcr6vS45U2RRWEB4oy1IRFv84xyY041yZYuzyu3zxtdzptiU8osNNdwJk5H91njSbpm7vMGqi8B7YzVjCXP/X71flFDP2YwVbP/y2o2l6A6xnCEwYOl6smns2I/LZbgd8KLl53Mxm4pdqnmECoH5sQyRrjHK7hwqtt3JhekCo0GXTIvS64X4C0CDCfKjQbZRXDqp2cCn7qub1ZXERCfqStiKKhe/PvswDbaGy9CXRtttEYZ3AuC9OGpGYLD5j8Q6OKZEErlSQEWUcyy0wn1EipuqxfvB9Eng5f283AEirhbQoQ6JOp/J4vboOXgOmz9jty7EYcDHI9fiXJrmcTwNwRGWzBIQJjXgPIfwLpFVJtAGR824z5efymgmQLaWqXsPQRAcLCrZSpCdzSzYnFIDwnL2TyOds2LZdg9k+RTPTbn+iaDTbWbNRg/P4ij591OdCH/fPvF/fhkd4I=
