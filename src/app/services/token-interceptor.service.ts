@@ -14,7 +14,7 @@ import { throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class TokenInterceptorService implements HttpInterceptor {
-  baseUrl = 'http://52.58.40.57:8080';
+  baseUrl = 'http://3.126.41.93:8080';
   allowedUrl = ['/login', '/login/', '/login/request-password', '/login/request-password/', '/login/password', '/login/password/'];
 
   constructor(
