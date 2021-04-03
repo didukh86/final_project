@@ -4,7 +4,7 @@ dist: focal
 before_script:
 - npm install @angular/cli@7.0.3
 - yarn install
-script: ng build --prod
+script: ng build 
 deploy:
   provider: s3
   access_key_id: "$AWS_KEY"
